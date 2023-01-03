@@ -30,3 +30,24 @@ function operate(operator,a,b) {
     }
 };
 
+const container = document.querySelector('#container')
+
+const content = document.querySelector('.content');
+content.style.width = '600px'
+content.style.height = '600px';
+
+let num = 9;
+
+for (i = 0 ; i < 3 ; i++) {
+    for (j = 0 ; j < 3 ; j++) {
+    const btn = document.createElement('button');
+    btn.className = 'grid';
+    btn.style.outline = '1px solid black';
+    btn.style.width = '200px';
+    btn.style.height = '200px';
+    btn.style.backgroundColor = 'white';
+    btn.textContent = num.toString();
+    content.appendChild(btn);
+    num--;
+    }
+}
